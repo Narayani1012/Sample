@@ -1,25 +1,52 @@
-import React from 'react';
+import React, { Component } from "react";
 import logo from './logo.svg';
 import './App.css';
+import Message from "./component/Message";
+import Eventbinds from "./component/Eventbinds";
+import ParentComponent from "./component/ParentComponent";
+import Form from "./component/Form";
+import Purecomponent from "./component/Purecomponent";
+import Parentcomp from "./component/Parentcomp";
+import Listrendering from "./component/Listrendering";
+import Memocomp from "./component/Memocomp";
+import Refsdemo from "./component/Refsdemo";
+import Login from './login_page/Login';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Register from "./login_page/Register";
+import Home from "./login_page/Home";
+import history from './history.js'
+import Postlist from "./component/Postlist";
+import Hookcounter from "./component/Hookcounter";
 
-function App() {
+const App = () => {
   return (
+    <Router  history={history}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Eventbinds /> */}
+      {/* <ParentComponent /> */}
+      {/* <Form /> */}
+      <Route exact path="/" component={Login}>
+        <Login />
+      </Route>
+      
+      {/* <Form /> */}
+      {/* <Purecomponent /> */}
+      {/* <Parentcomp /> */}
+      {/* <Eventbinds /> */}
+      {/* <Listrendering /> */}
+      {/* <Memocomp /> */}
+      {/* <Refsdemo /> */}
+      <Route exact path="/Register" component={Register}> 
+        
+      </Route>
+      <Route exact path="/Home" component={Home}> 
+        <Home/>
+      </Route>
+      {/* <Login /> */}
+      {/* <Postlist /> */}
+      {/* <Hookcounter /> */}
     </div>
+    </Router>
   );
 }
 

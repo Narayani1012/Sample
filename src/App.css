@@ -6,6 +6,29 @@
   height: 40vmin;
   pointer-events: none;
 }
+.Registration-form {
+  text-align: center;
+  vertical-align: middle;
+  padding: 150px 400px;
+}
+.inner-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 25px 0px;
+  border-radius: 5px;
+}
+.reg-btn{
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: palevioletred;
+}
+.text{
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
